@@ -21,7 +21,7 @@ terminal:
 
 The following list is little bit unorganized at the moment. I have done whatever
 came up in my mind. Later I may want to come back to it and organize a bit so
-that somebody else can this repo useful.
+that somebody else can find this repo useful.
 
 List of files in this directory
 ------------------------------------
