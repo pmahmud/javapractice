@@ -19,6 +19,15 @@ terminal:
 - Clean all the class files
   ```rm *.class```
 
+- Create new file
+  ```bash new```
+  see contents of "new": it basically increment count and create a new file
+  copying the contents of s1.java and creating a s(incrementedValue).java
+
+- See the last file count
+  ```cat count```
+
+
 The following list is little bit unorganized at the moment. I have done whatever
 came up in my mind. Later I may want to come back to it and organize a bit so
 that somebody else can find this repo useful.
@@ -31,3 +40,5 @@ s4.
 s3.
 s2. take input from user using scanner
 s1. print a text in the stdout
+
+new - bash script to create a new file
