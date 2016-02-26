@@ -29,6 +29,9 @@ class s6{
     // get by Index
     System.out.println("item at index 0:"+al.get(0));
 
+    System.out.println("trying to insert an item in the middle");
+    al.add(1,5);
+
     //traverse each item
     System.out.println("printing the list one by one");
     for(int x:al){

@@ -4,7 +4,7 @@
   - random access is not possible
 */
 
-
+import java.util.Stack;
 class Node{
   Node next;
   int data;
@@ -38,6 +38,9 @@ class SinglyLinkedList{
   void setHead(Node n){
     this.head = n;
   }
+  void clear(){
+    this.setHead(null);
+  }
   void insert(int d){
     Node n = new Node(d);
     if(head==null){
@@ -69,21 +72,81 @@ class SinglyLinkedList{
     return false;
   }
 
-  int getMid(int d){
-    int mid = d/2;
-    if(d%2!=0)
-      return mid+1;
-    return mid;
+  int getMidPoint(){
+    Node n1 = head;
+    Node n2 = head;
+    int result = -1;
+    while(n1!=null){
+      n1 = n1.next;
+      if(n1!=null){
+        n1 = n1.next;
+        n2 = n2.next;
+      }
+    }
+    if(n2!=null){
+      result = n2.data;
+    }
+    return result;
   }
 
-  void findMidPoint(){
-    Node n = head;
-    while(n!=null){
+  void reverse(){
+    Node prev = null;
+    Node current = this.head;
+    Node next = null;
 
+    while(null!=current){
+      next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+    }
+
+    this.head = prev;
+  }
+
+  int getKthFromLast(int k){
+    Node runner = head;
+    Node lagger = head;
+    int result = -1;
+    //give runner the advantage to run ahead this will create K difference
+    while(0!=k && null!=runner){
+      runner = runner.next;
+      k--;
+    }
+
+    while( null!=runner){
+      runner = runner.next;
+      lagger = lagger.next;
+    }
+
+    if( null!=lagger ){
+      result = lagger.data;
+    }
+    return result;
+  }
+  boolean isPalindrome(){
+    Stack<Node> nodeStack = new Stack<Node>();
+    Node n = head;
+
+    if(null == n){
+      return false;
+    }
+    while(null!=n){
+        nodeStack.push(n);
+        n = n.next;
+    }
+
+    //reset the head here
+    n = head;
+    while(!nodeStack.empty()){
+      if(nodeStack.peek().data != n.data){
+        return false;
+      }
+      nodeStack.pop();
       n = n.next;
     }
+    return true;
   }
-
   void remove(int data){
     /* Cases to consider here
      1. list is empty
@@ -167,6 +230,42 @@ class s5{
     Node n1 = new Node(2);
     Node n2 = new Node(2);
     System.out.println(n1==n2);
+
+
+    sl.insert(5);
+    sl.printLists();
+    System.out.println("Mid:" + sl.getMidPoint());
+    sl.insert(6);
+    sl.printLists();
+    System.out.println("Mid:" + sl.getMidPoint());
+    sl.clear();
+    System.out.println("Mid:" + sl.getMidPoint());
+
+    sl.insert(5);
+    sl.printLists();
+
+    System.out.println("Mid:" + sl.getMidPoint());
+
+    sl.clear();
+    sl.insert(1);
+    sl.insert(2);
+    sl.insert(3);
+    sl.insert(4);
+    sl.insert(5);
+    sl.printLists();
+
+    System.out.println("2nd last:" + sl.getKthFromLast(2));
+    sl.reverse();
+    sl.printLists();
+
+    sl.clear();
+    sl.insert(1);
+    sl.insert(2);
+    sl.insert(2);
+    sl.insert(1);
+
+    sl.printLists();
+    System.out.println("isPalindrome:" + sl.isPalindrome());
 
   }
 
