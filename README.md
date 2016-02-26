@@ -1,13 +1,14 @@
-# javapractice
-Practice some java code
+# JavaPractice
+This repository have some java source codes that I am writing to prepare for
+technical interviews.
 
 - Compile and run:
-  $ jv filename
+  ```jv filename```
   Example:
-  jv s2
+  ```jv s2```
 
 - Clean all the class files
-  rm *.class
+  ```rm *.class```
 
 List of files in this directory
 s4.
