@@ -19,8 +19,14 @@ terminal:
 - Clean all the class files
   ```rm *.class```
 
+The following list is little bit unorganized at the moment. I have done whatever
+came up in my mind. Later I may want to come back to it and organize a bit so
+that somebody else can this repo useful.
+
 List of files in this directory
 ------------------------------------
+s6. Using ArrayList in java
+s5. Singly Linked List
 s4.
 s3.
 s2. take input from user using scanner
