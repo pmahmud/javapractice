@@ -34,6 +34,8 @@ that somebody else can find this repo useful.
 
 List of files in this directory
 ------------------------------------
+s20. insertion sort
+s19. bubble sort
 s18. Stack implementation with array
 s17. Queue implementation
 s16. Stack implementation
