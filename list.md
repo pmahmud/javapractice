@@ -1,4 +1,4 @@
-s23. Generic Type, Suppresswarning
+s24. Generic Type, Suppresswarning
 s23. Binary Search Tree
 s22. recursive binary search
 s21. selection sort
