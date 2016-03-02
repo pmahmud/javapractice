@@ -11,8 +11,12 @@ class s19{
     }
 }
   //Time: O(n^2), Space: O(1)
+  // i = 0 to length - 1
+  // j = 1 to length - i
+  // compare and swap: a[j], a[j-1]
   static void bubbleSort(int[] a){
     for(int i = 0; i < a.length-1; i++){
+      //invariant: after one pass the last element is in the correct place
       for(int j = 1; j < a.length-i; j++){
         if(a[j-1]>a[j]){
           int temp = a[j-1];
