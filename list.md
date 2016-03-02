@@ -1,4 +1,4 @@
-s23. 
+s23. Binary Search Tree
 s22. recursive binary search
 s21. selection sort
 s20. insertion sort
@@ -17,8 +17,8 @@ s8. Hash Table Example
 s7. String problems
 s6. Using ArrayList in java
 s5. Singly Linked List
-s4.
-s3.
+s4. Incomplete array list implementation
+s3. Merge two string
 s2. take input from user using scanner
 s1. print a text in the stdout
 
