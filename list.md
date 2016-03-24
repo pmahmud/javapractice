@@ -1,3 +1,7 @@
+s26. matrix traversal print path
+s27. string permutation
+s26. matrix traversal
+s25. Intro to recursion
 s24. Generic Type, Suppresswarning
 s23. Binary Search Tree
 s22. recursive binary search

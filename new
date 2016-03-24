@@ -2,3 +2,4 @@ typeset -i count=$(cat count)
 let "count ++"
 echo "$count" > count
 cp s1.java "s$count.java"
+echo "s$count.java created at current directory"
